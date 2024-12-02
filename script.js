@@ -5,9 +5,14 @@ leftRight = document.querySelector('.leftRight');
 let text = document.querySelector('p');
 let shotgun = document.querySelector('.shotgun');
 let injury = document.querySelector('.injury');
-let monkey = document.querySelector('.monkey')
+let monkey = document.querySelector('.monkey');
+let gs = document.querySelector('.gs');
+let oblock = document.querySelector('.oblock');
 shotgun.style.display="none"; 
 injury.style.display="none";
+gs.style.display="none";
+oblock.style.display="none";
+monkey.style.display="none";
 
 
 // Left button crodie
@@ -35,11 +40,11 @@ shotgun.addEventListener('dblclick', function(){
 
 // mouse enter event
 
-monkey.addEventListener('mouseenter', function() {
+monkeyE.addEventListener('click', function() {
 
 
     shotgun.style.display="none";
-    text.innerHTML= "Heres a medkit lil bro";
+    text.innerHTML= "Heres a shotgun to defend yourself";
 });
 
 // Right Button Crodie
@@ -54,3 +59,4 @@ right.addEventListener('click', function(){
     text.innerHTML="You begin at a gun store";
 
 });
+
