@@ -9,13 +9,19 @@ let monkey = document.querySelector('.monkey');
 let gs = document.querySelector('.gs');
 let oblock = document.querySelector('.oblock');
 let monkeyE = document.querySelector('.monkeyE');
+let pg = document.querySelector('.pg');
+let find = document.querySelector('.find'); 
+let protect = document.querySelector('.protect');
+let run = document.querySelector('.run');
 shotgun.style.display="none"; 
 injury.style.display="none";
 gs.style.display="none";
 oblock.style.display="none";
 monkey.style.display="none";
-
-
+pg.style.display="none";
+find.style.display="none";
+protect.style.display="none";
+run.style.display="none";
 
 
 // Left button crodie
@@ -25,24 +31,26 @@ left.addEventListener('click', function() {
  leftRight.style.display ="none"; 
  left.style.display ="none";
 right.style.display ="none";
-shotgun.style.display="block";
+find.style.display="block";
 monkey.style.display="none";
 gs.style.display="none";
-text.innerHTML="Double click to shoot";
+
+text.innerHTML="You find a shotgun in a alley, Double click to play with it up";
 
 });
 
 // double click the shotgun
 
-shotgun.addEventListener('dblclick', function(){
+find.addEventListener('dblclick', function(){
     console.log("shotgun dbl clicked")
     shotgun.style.display="none";
    injury.style.display= "none";
    gs.style.display= "none";
+   find.style.display="none";
 
    injury.style.display="block";
    text.innerHTML ="OUCH";
-   text.innerHTML="You shot a random for 0 reason"; 
+   text.innerHTML="You shoot a random by accident, what do you do?"; 
 
 }); 
 
@@ -64,10 +72,7 @@ shotgun.addEventListener('dblclick', function(){
 
 });
 
-shotgun.addEventListener('dbl', function()){
 
-    continue here
- 
 
 
 // mouse enter event
@@ -79,14 +84,52 @@ monkeyE.addEventListener('mouseenter', function() {
     monkey.style.display="block";
     gs.style.display="none";
 
-     text.innerHTML= "Heres a medkit lil bro";
+     text.innerHTML= "You give the injured man a medkit";
     
 });
 
-monkey.addEventListener('dblclick', function(){
-    console.log("monkey dbl clicked");
-    COntinute here
 
 
-});
+gs.addEventListener('dblclick', function(){
+    console.log("gs dbl clicked")
+    shotgun.style.display="none";
+   injury.style.display= "none";
+   gs.style.display= "none";
+   pg.style.display="block";
+   text.innerHTML ="OUCH";
+   text.innerHTML="You now own a shotgun legally"; 
 
+}); 
+
+pg.addEventListener('dblclick', function(){
+    console.log("pg dbl clicked")
+    shotgun.style.display="none";
+   injury.style.display= "none";
+   gs.style.display= "none";
+   pg.style.display="none";
+   text.innerHTML="You're now tasked with protecting O block"; 
+   protect.style.display="block";
+
+}); 
+
+gs.addEventListener('dblclick', function(){
+    console.log("gs dbl clicked")
+    shotgun.style.display="none";
+   injury.style.display= "none";
+   gs.style.display= "none";
+   pg.style.display="block";
+   text.innerHTML ="OUCH";
+   text.innerHTML="You now own a shotgun legally"; 
+
+}); 
+
+injury.addEventListener('dblclick', function(){
+    console.log("run dbl clicked")
+    shotgun.style.display="none";
+   injury.style.display= "none";
+   gs.style.display= "none";
+   pg.style.display="none";
+   run.style.display="block";
+   text.innerHTML="You're now on the run from the cops"; 
+
+}); 
