@@ -83,6 +83,7 @@ monkeyE.addEventListener('mouseenter', function() {
     injury.style.display="none";
     monkey.style.display="block";
     gs.style.display="none";
+    protect.style.display="none";
 
      text.innerHTML= "You give the injured man a medkit";
     
